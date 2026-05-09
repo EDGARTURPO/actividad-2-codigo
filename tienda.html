@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | K Pop</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+    <header class="cabecera">
+      <nav class="navegacion">
+        <!-- Hijo 1 -->
+        <div class="logo">
+          <img src="imagen/logo1.png" alt="K POP" />
+        </div>
+
+        <!-- Hijo 2 -->
+        <ul class="menu">
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+        </ul>
+
+        <!-- Hijo 3 -->
+        <div class="acciones">
+          <a href="#" class="login">Iniciar Sesión</a>
+          <div class="carrito"><i class="fa-solid fa-bag-shopping"></i><span class="contador">0</span></div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="tienda">
+      <!-- Barra lateral de filtros -->
+      <aside class="filtros">
+        <h3>Filtrar por</h3>
+        <div class="grupo-filtro">
+          <h4>Categoría</h4>
+          <label><input type="checkbox" /> Libros</label>
+          <label><input type="checkbox" /> Papelería</label>
+          <label><input type="checkbox" /> Escritura</label>
+        </div>
+        <div class="grupo-filtro">
+          <h4>Precio</h4>
+          <select>
+            <option>Todos los precios</option>
+            <option>Menos de S/ 50</option>
+            <option>S/ 50 a S/ 150</option>
+          </select>
+        </div>
+      </aside>
+
+      <div class="contenedor-productos">
+        <!-- Producto 1 -->
+        <article class="producto-card">
+          <img src="imagen/logo7.png" alt="Libro de Ingeniería" />
+          <div class="producto-info">
+            <span>Libros</span>
+            <h4>Cálculo de una Variable</h4>
+            <p class="precio">S/ 85.00</p>
+            <button class="btn-comprar btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="producto-card">
+          <img src="imagen/logo5.png" alt="Lapicero" />
+          <div class="producto-info">
+            <span>Escritura</span>
+            <h4>Portaminas Rotring 0.5</h4>
+            <p class="precio">S/ 45.00</p>
+            <button class="btn-comprar btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <!-- Agrega 2 más para llenar la fila... -->
+        <!-- Producto 3: Papelería -->
+        <article class="producto-card">
+          <img src="imagen/logo10.png" alt="Cuaderno Técnico" />
+          <div class="producto-info">
+            <span>Papelería</span>
+            <h4>Cuaderno de Notas A5 - Tapa Dura</h4>
+            <p class="precio">S/ 35.00</p>
+            <button class="btn-comprar btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto 4: Escritura -->
+        <article class="producto-card">
+          <img src="imagen/logo11.png" alt="Estilógrafos" />
+          <div class="producto-info">
+            <span>Escritura</span>
+            <h4>Set de Estilógrafos Técnicos (3 unidades)</h4>
+            <p class="precio">S/ 120.00</p>
+            <button class="btn-comprar btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto: Papelería -->
+        <article class="producto-card">
+          <img src="imagen/logo4.png" alt="Agenda Pro" />
+          <div class="producto-info">
+            <span>Papelería</span>
+            <h4>Agenda Ejecutiva 2026 - Tapa Cuero</h4>
+            <p class="precio">S/ 65.00</p>
+            <button class="btn-comprar btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <!-- Producto: Libros -->
+        <article class="producto-card">
+          <img src="imagen/logo8.png" alt="Libro Gestión" />
+          <div class="producto-info">
+            <span>Libros</span>
+            <h4>Gestión de Proyectos de Ingeniería</h4>
+            <p class="precio">S/ 95.00</p>
+            <button class="btn-comprar btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <img src="imagen/logo1.png" alt="Logo" class="footer-logo" />
+        <div class="footer-text">
+          <p><strong>Ubicación y Teléfono</strong></p>
+          <p>Calle de la Armonía 12, 28004 Lima Peru</p>
+          <p>+51 912 345 678</p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h3>Atención al cliente</h3>
+        <p>Email: hola@kpoplibreria.com</p>
+        <p>Lunes a Viernes: 09:00 - 20:00</p>
+      </div>
+    </footer>
+
+    <div class="footer-copy">
+      <p>© 2026 K POP. Todos los derechos reservados.</p>
+    </div>
+
+    <script>
+      const botonesAgregar = document.querySelectorAll(".btn-agregar");
+
+      const contador = document.querySelector(".contador");
+
+      let cantidad = 0;
+
+      botonesAgregar.forEach((boton) => {
+        boton.addEventListener("click", () => {
+          cantidad++;
+
+          contador.textContent = cantidad;
+        });
+      });
+    </script>
+  </body>
+</html>
