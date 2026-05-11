@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio | K Pop</title>
     <link rel="stylesheet" href="estilo.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <header class="cabecera">
@@ -24,7 +27,10 @@
         <!-- Hijo 3 -->
         <div class="acciones">
           <a href="#" class="login">Iniciar Sesión</a>
-          <div class="carrito"><i class="fa-solid fa-bag-shopping"></i><span class="contador">0</span></div>
+          <div class="carrito">
+            <i class="fa-solid fa-bag-shopping"></i
+            ><span class="contador">0</span>
+          </div>
         </div>
       </nav>
     </header>
@@ -35,9 +41,9 @@
         <h3>Filtrar por</h3>
         <div class="grupo-filtro">
           <h4>Categoría</h4>
-          <label><input type="checkbox" /> Libros</label>
-          <label><input type="checkbox" /> Papelería</label>
-          <label><input type="checkbox" /> Escritura</label>
+          <label><input type="checkbox" id="libros" /> Libros</label>
+          <label><input type="checkbox" id="papeleria" /> Papelería</label>
+          <label><input type="checkbox" id="escritura" /> Escritura</label>
         </div>
         <div class="grupo-filtro">
           <h4>Precio</h4>
@@ -51,7 +57,7 @@
 
       <div class="contenedor-productos">
         <!-- Producto 1 -->
-        <article class="producto-card">
+        <article class="producto-card" data-categoria="libros">
           <img src="imagen/logo7.png" alt="Libro de Ingeniería" />
           <div class="producto-info">
             <span>Libros</span>
@@ -62,7 +68,7 @@
         </article>
 
         <!-- Producto 2 -->
-        <article class="producto-card">
+        <article class="producto-card" data-categoria="escritura">
           <img src="imagen/logo5.png" alt="Lapicero" />
           <div class="producto-info">
             <span>Escritura</span>
@@ -73,7 +79,7 @@
         </article>
 
         <!-- Producto 3: Papelería -->
-        <article class="producto-card">
+        <article class="producto-card" data-categoria="papeleria">
           <img src="imagen/logo10.png" alt="Cuaderno Técnico" />
           <div class="producto-info">
             <span>Papelería</span>
@@ -84,7 +90,7 @@
         </article>
 
         <!-- Producto 4: Escritura -->
-        <article class="producto-card">
+        <article class="producto-card" data-categoria="escritura">
           <img src="imagen/logo11.png" alt="Estilógrafos" />
           <div class="producto-info">
             <span>Escritura</span>
@@ -95,7 +101,7 @@
         </article>
 
         <!-- Producto: Papelería -->
-        <article class="producto-card">
+        <article class="producto-card" data-categoria="papeleria">
           <img src="imagen/logo4.png" alt="Agenda Pro" />
           <div class="producto-info">
             <span>Papelería</span>
@@ -106,7 +112,7 @@
         </article>
 
         <!-- Producto: Libros -->
-        <article class="producto-card">
+        <article class="producto-card" data-categoria="libros">
           <img src="imagen/logo8.png" alt="Libro Gestión" />
           <div class="producto-info">
             <span>Libros</span>
@@ -139,20 +145,7 @@
       <p>© 2026 K POP. Todos los derechos reservados.</p>
     </div>
 
-    <script>
-      const botonesAgregar = document.querySelectorAll(".btn-agregar");
+    <script src="script.js"></script>
 
-      const contador = document.querySelector(".contador");
-
-      let cantidad = 0;
-
-      botonesAgregar.forEach((boton) => {
-        boton.addEventListener("click", () => {
-          cantidad++;
-
-          contador.textContent = cantidad;
-        });
-      });
-    </script>
   </body>
 </html>
