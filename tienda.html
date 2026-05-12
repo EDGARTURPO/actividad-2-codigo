@@ -29,7 +29,7 @@
           <a href="#" class="login">Iniciar Sesión</a>
           <div class="carrito">
             <i class="fa-solid fa-bag-shopping"></i
-            ><span class="contador">0</span>
+            ><span class="contador" id="contador-carrito">0</span>
           </div>
         </div>
       </nav>
@@ -145,7 +145,25 @@
       <p>© 2026 K POP. Todos los derechos reservados.</p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- PANEL CARRITO -->
 
+    <div class="panel-carrito" id="panel-carrito">
+      <div class="carrito-header">
+        <h3>Tu carrito</h3>
+
+        <button id="cerrar-carrito">✕</button>
+      </div>
+
+      <div class="carrito-productos" id="carrito-productos"></div>
+
+      <div class="carrito-footer">
+        <p>
+          Total:
+          <span id="total-carrito"> S/ 0 </span>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
