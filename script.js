@@ -12,7 +12,19 @@ const carritoProductos = document.getElementById("carrito-productos");
 
 const totalCarrito = document.getElementById("total-carrito");
 
+const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
+
+const overlay = document.getElementById("overlay");
+
 let carrito = [];
+
+const carritoGuardado = localStorage.getItem("carrito");
+
+if (carritoGuardado) {
+  carrito = JSON.parse(carritoGuardado);
+
+  actualizarCarrito();
+}
 
 botonesAgregar.forEach((boton) => {
   boton.addEventListener("click", () => {
@@ -37,12 +49,28 @@ botonesAgregar.forEach((boton) => {
 
 carritoIcono.addEventListener("click", () => {
   panelCarrito.classList.add("activo");
+  overlay.classList.add("activo");
 });
 
 // CERRAR CARRITO
 
 cerrarCarrito.addEventListener("click", () => {
   panelCarrito.classList.remove("activo");
+  overlay.classList.remove("activo");
+});
+
+vaciarCarritoBtn.addEventListener("click", () => {
+  carrito = [];
+
+  actualizarCarrito();
+});
+
+overlay.addEventListener("click", () => {
+
+    panelCarrito.classList.remove("activo");
+
+    overlay.classList.remove("activo");
+
 });
 
 function actualizarCarrito() {
@@ -86,6 +114,8 @@ function actualizarCarrito() {
 
   // MOSTRAR TOTAL
   totalCarrito.textContent = `S/ ${total}`;
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 const checkLibros = document.getElementById("libros");
