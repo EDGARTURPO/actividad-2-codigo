@@ -189,6 +189,7 @@ img {
 }
 
 @media (max-width: 600px) {
+
   .footer-left,
   .footer-right {
     flex-direction: column;
@@ -731,3 +732,32 @@ img {
 }
 
 
+/* ====================
+   ANIMACIONES PRODUCTOS
+==================== */
+
+.producto-card {
+  transition: 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.producto-card img {
+  transition: 0.3s ease;
+}
+
+.producto-card:hover img {
+  transform: scale(1.05);
+}
+
+.btn-comprar {
+  transition: 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: black;
+  color: white;
+}
