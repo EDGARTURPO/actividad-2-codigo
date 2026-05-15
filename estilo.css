@@ -44,7 +44,7 @@ img {
 }
 
 .logo img {
-  height: 45px;
+  height: 60px;
   width: auto;
 }
 
@@ -759,5 +759,25 @@ img {
 
 .btn-comprar:hover {
   background-color: black;
+  color: white;
+}
+.btn-index {
+  background-color: #de7352;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin: 3px
+}
+.btn-index:hover {
+  background-color: rgb(148, 200, 139);
+  color: white;
+}
+.login:hover {
+  background-color: #000000;
   color: white;
 }
